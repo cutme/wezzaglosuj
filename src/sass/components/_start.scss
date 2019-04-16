@@ -2,6 +2,9 @@
     .o-cols {
         &__item {
             &:first-of-type {
+                @extend %flex;
+                @extend %flex-column;
+                @extend %flex-spacebetween;
             }
         }
     }

@@ -8,16 +8,17 @@ const happyThreadPool = HappyPack.ThreadPool({ size: 5 });
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 console.log(process.env.NODE_ENV);
 
 const templateFileMapper = [
-                                {template: "./src/index.html", file: "index.html"},
-                                {template: "./src/w-co-warto-zainwestowac-dlaczego-wybralem-rockwall-investments.html", file: "w-co-warto-zainwestowac-dlaczego-wybralem-rockwall-investments.html"},
-                                {template: "./src/kontakt.html", file: "kontakt.html"}
+                                {template: "./src/index.ejs", file: "index.html"},
+                                {template: "./src/informacje.ejs", file: "informacje.html"},
+                                {template: "./src/do-pobrania.ejs", file: "do-pobrania.html"},
+                                {template: "./src/zwyciezcy.ejs", file: "zwyciezcy.html"},
+                                {template: "./src/kontakt.ejs", file: "kontakt.html"}
                             ]
 
 
@@ -48,7 +49,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: "js/[name]",
-        publicPath: '/'
+        publicPath: ''
     },
 
     module: {
@@ -58,6 +59,7 @@ module.exports = {
             loaders.fonts,
             loaders.images,
             loaders.js,
+            loaders.ejs,
         ]
     },
     
@@ -69,10 +71,6 @@ module.exports = {
         createHappyPlugin('scss', ['css-loader?importLoaders:1!postcss-loader?sourceMap:1!sass-loader']),
         
         plugins.js,
-        
-        new CopyWebpackPlugin([
-            { from: path.resolve(__dirname, '../src/contact.php'), to: path.resolve(__dirname, '../dist/') }
-        ]),
         
         new HtmlCriticalPlugin({
             base: path.join(path.resolve(__dirname), '../dist/'),

@@ -1,11 +1,5 @@
 .c-contact {
     
-    &__vote {
-        max-width: 300px;
-        
-        
-    }
-    
     .o-cols {
         &__item {
             &:first-of-type {
@@ -15,4 +9,12 @@
             }
         }
     }
+    
+    &__vote {
+        max-width: 300px;
+        
+        
+    }
+    
+    
 }
