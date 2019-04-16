@@ -1,0 +1,68 @@
+.is-hidden {
+    display: none;
+}
+
+.u-apla {
+    @extend %rel;
+
+    &:after {
+        @extend %abs;
+        @extend %abs-after; z-index: -1;
+        left: 50%; top: -100px;
+        width: 50%; height: calc(100% + 100px);
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: none;
+        }
+    }
+    
+    &--blue {
+        &:after {
+            background-color: $c-blue1;
+        }
+    }
+    
+    &--pink {
+        &:after {
+            background-color: $c-pink1;
+        }
+    }
+}
+
+.u-photo {
+    @extend %rel;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+    
+    &:before {
+        position: absolute;
+        left: -50px; top: 0; z-index: -1;
+        display: inline-block;
+        content: ' ';
+        width: calc(100% + 100px); height: calc(100% + 100px);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            display: none;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            height: calc(100% + 50px);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            left: -30px;
+            width: calc(100% + 60px);
+        }
+        
+        .u-apla--blue & {
+            background-color: $c-blue1;
+        }
+        
+        .u-apla--pink & {
+            background-color: $c-pink1;
+        }
+    }
+}

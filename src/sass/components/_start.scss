@@ -1,0 +1,14 @@
+.c-start {
+    .o-cols {
+        &__item {
+            &:first-of-type {
+            }
+        }
+    }
+    
+    .o-content {
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 50px;
+        }
+    }
+}

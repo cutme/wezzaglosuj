@@ -1,0 +1,12 @@
+.o-content {
+    padding-top: 100px;
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) {
+        padding-right: 50px;
+    }
+
+    
+    @media screen and ( max-width: $base + 100px ) {
+        padding-top: get-vw-1200(100);
+    }
+}

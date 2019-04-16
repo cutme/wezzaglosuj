@@ -1,0 +1,21 @@
+.c-social {
+    @extend %flex;
+    
+    li {
+        margin-right: 20px;
+    }
+    
+    [class^="icon-"] {
+        @extend %flex;
+        @extend %flex-xy;
+        width: 25px; height: 25px;
+        border: 1px solid $c-black1;
+
+        &:hover {
+            background-color: $c-pink1;
+            border-color: $c-pink1;
+            color: white;
+        }
+    }
+    
+}

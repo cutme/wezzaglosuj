@@ -1,0 +1,21 @@
+@function rem( $target, $context: $base-font-size ) {
+	@return ( $target / 16 ) * 1rem;
+}
+
+@function get-vw-1200($target) {
+	$vw-context: ((1200) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-768($target) {
+	$vw-context: (($tablet_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

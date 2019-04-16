@@ -1,0 +1,110 @@
+/*
+button, input, textarea {
+	background-color: transparent;
+	border: none;
+	border-color: inherit;
+	border-radius: 0;
+	font-family: $text;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input, textarea {
+	width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	text-rendering: optimizeLegibility; 
+	
+	font: {
+		family: $text;
+	}
+	cursor: text;
+	color: inherit;
+}
+
+input {
+	&[disabled],
+	&[readonly] {
+		opacity: .5;
+	}
+}
+
+input {
+	&[type=text],
+	&[type=email],
+	&[type=tel] {
+		width: 100%;
+	}
+}
+
+textarea {
+	overflow: auto;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+::-webkit-input-placeholder {color: rgba($c-black2, .5);}
+:-moz-placeholder {color: rgba($c-black2, .5); }
+::-moz-placeholder {color: rgba($c-black2, .5); }
+:-ms-input-placeholder { color: rgba($c-black2, .5); }
+
+.form-field {
+    @extend %anim;
+    height: 55px;
+    background-color: $c-gray1;
+    border: 1px solid darken($c-gray2, 10%);
+    padding: 0 20px;
+    font-size: rem(18);
+    color: $c-black2;
+    
+    .has-error & {
+        border-color: $c-red;
+        box-shadow: inset 0 0 4px 0 rgba($c-red, .4);
+    }
+    
+    &:focus {
+        background-color: white;
+    }
+}
+
+textarea.form-field {
+    padding: 20px;
+    height: 200px;
+}
+
+.form-row {
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+}
+
+
+
+
+*/

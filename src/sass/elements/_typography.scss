@@ -1,0 +1,37 @@
+body {
+	@include antialias;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $medium;
+	}
+	color: $c-black1;
+}
+
+a {
+    //transition: all 250ms ease-out;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	&:hover {
+    	transition: all 250ms ease-out;
+	}
+	
+	&:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+strong {
+    font-weight: $bold;
+}
+
+::selection {
+	background-color: $c-pink1;
+	color: white;
+}

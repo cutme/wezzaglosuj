@@ -1,0 +1,21 @@
+.o-container {
+    //@extend %anim;
+    min-height: 100%;
+    //opacity: 0;
+    //transform: translate3d(0, 20px, 0);
+    //overflow: hidden;
+    padding-bottom: 100px;
+    
+    @media screen and ( max-width: $base + 100px ) {
+        padding-bottom: get-vw-1200(100);
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        padding-bottom: 50px;
+    }
+    
+    .is-loaded & {
+        //transform: translate3d(0,0,0);
+        //opacity: 1;
+    }
+}
