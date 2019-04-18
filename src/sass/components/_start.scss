@@ -8,8 +8,10 @@
             }
         }
     }
-    
-    .o-content {
+
+    .o-article {
+        padding-top: 30px;
+        
         @media screen and ( max-width: $tablet_portrait + px ) {
             margin-bottom: 50px;
         }

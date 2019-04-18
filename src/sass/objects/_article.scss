@@ -17,7 +17,7 @@
     }
     
     ul {
-        padding-top: 0;
+        padding-top: 5px;
         padding-bottom: 10px;
     }
     
@@ -28,16 +28,16 @@
         li {
             @extend %rel;
             margin-bottom: .7em;
-            padding-left: 35px;
+            padding-left: 30px;
             
             &:before {
                 @extend %abs;
                 @extend %abs-after;
-                left: 0; top: -5px;
+                left: 0; top: -2px;
                 width: 26px; height: 24px;
                 font: {
                     family: $icomoon;
-                    size: rem(20);
+                    size: rem(14);
                 }
                 color: $c-blue1;
                 content: "\e900";
